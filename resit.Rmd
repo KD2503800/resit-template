@@ -1,0 +1,125 @@
+---
+title: "Property prices in Venice, Florida"
+author: "YOUR NAME (UUN: S0000000, GitHub: USERNAME)"
+date: "`r paste0('Last Compiled: ',format(Sys.time(), '%d %B, %Y'))`"
+output: html_document
+---
+
+```{r load-packages, message=FALSE, warning=FALSE}
+library(tidyverse)
+library(tidymodels)
+```
+
+## Exercise 1
+
+```{r load-data, eval=FALSE}
+# change eval=FALSE to eval=TRUE
+
+
+# Add your code to load the data here
+
+RealEstate <- ___
+
+```
+
+
+## Exercise 2 and 3 
+
+### Code
+
+```{r add-variable , eval=FALSE}
+# change eval=FALSE to eval=TRUE
+
+RealEstate <- RealEstate %>%
+  ___(Less_than_300k = case_when(
+    ___,
+    ___
+    ),
+    Less_than_300k = fct_relevel(Less_than_300k, ___, ___)
+    )
+  
+RealEstate%>%
+  ___(___) %>%
+  ___(
+    ___,
+  )
+```    
+
+
+## Exercise 4
+
+```{r dataviz, eval=FALSE}
+# change eval=FALSE to eval=TRUE
+ggplot(____) +
+  ____(____)
+
+```
+
+## Exercise 5
+
+*Add your narrative here.*
+
+
+
+## Exercise 6
+
+*Add your narrative here.*
+
+
+
+## Exercise 7
+
+```{r bootstrap, eval=FALSE}
+# change eval=FALSE to eval=TRUE
+
+boot_df <- RealEstate %>%
+  # specify the variable of interest
+  ___(___) %>% 
+  # generate 15000 bootstrap samples
+  ___(___) %>% 
+  # calculate the mean of each bootstrap sample
+  calculate(stat = ___) %>%
+  # calculate 95% confidence interval
+    summarize(lower = ___,
+            upper = ___)
+
+boot_df
+
+```
+
+## Exercise 8
+
+#### Code
+
+```{r linear-reg, eval=FALSE}
+# change eval=FALSE to eval=TRUE
+
+real_est_fit <- ___
+
+tidy(log_real_est_fit)
+
+```
+
+#### Narrative
+
+*Add your narrative here.*
+
+
+## Exercise 9
+
+#### Code
+
+```{r log-reg, eval=FALSE}
+# change eval=FALSE to eval=TRUE
+
+
+log_real_est_fit <- ___
+
+
+tidy(log_real_est_fit)
+
+```
+
+#### Narrative
+
+*Add your narrative here.*
