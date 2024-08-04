@@ -10,7 +10,8 @@ library(tidyverse)
 library(tidymodels)
 ```
 
-## Exercise 1
+
+## Data Load
 
 ```{r load-data, eval=FALSE}
 # change eval=FALSE to eval=TRUE
@@ -23,9 +24,7 @@ RealEstate <- ___
 ```
 
 
-## Exercise 2 and 3 
-
-### Code
+## Exercise 1 and 2
 
 ```{r add-variable , eval=FALSE}
 # change eval=FALSE to eval=TRUE
@@ -43,8 +42,24 @@ RealEstate%>%
   ___(
     ___,
   )
+``` 
+
+## Exercise 3 
+
+```{r ex-3 , eval=FALSE}
+# change eval=FALSE to eval=TRUE
+
+RealEstate_subset <- RealEstate_new %>%
+  group_by(____, _____) %>%
+  ______(______) %>% 
+  _______(_____)
+
 ```    
 
+
+*Add your narrative here.*
+
+---
 
 ## Exercise 4
 
@@ -59,15 +74,9 @@ ggplot(____) +
 
 *Add your narrative here.*
 
-
+---
 
 ## Exercise 6
-
-*Add your narrative here.*
-
-
-
-## Exercise 7
 
 ```{r bootstrap, eval=FALSE}
 # change eval=FALSE to eval=TRUE
@@ -75,11 +84,11 @@ ggplot(____) +
 boot_df <- RealEstate %>%
   # specify the variable of interest
   ___(___) %>% 
-  # generate 15000 bootstrap samples
+  # generate 10000 bootstrap samples
   ___(___) %>% 
   # calculate the mean of each bootstrap sample
   calculate(stat = ___) %>%
-  # calculate 95% confidence interval
+  # calculate 90% confidence interval
     summarize(lower = ___,
             upper = ___)
 
@@ -87,7 +96,10 @@ boot_df
 
 ```
 
-## Exercise 8
+
+---
+
+## Exercise 7
 
 #### Code
 
@@ -105,6 +117,34 @@ tidy(log_real_est_fit)
 *Add your narrative here.*
 
 
+## Exercise 8
+
+#### Code
+
+```{r linear-reg_simple, eval=FALSE}
+# change eval=FALSE to eval=TRUE
+
+# New model fit
+
+
+```
+
+
+```{r}
+# Calculation of performance metrics
+
+```
+
+
+```{r}
+# Plot the residual vs fitted values
+
+```
+
+#### Narrative
+
+*Add your narrative here.*
+
 ## Exercise 9
 
 #### Code
@@ -120,6 +160,13 @@ tidy(log_real_est_fit)
 
 ```
 
+
 #### Narrative
+
+*Add your narrative here.*
+
+---
+
+## Exercise 10
 
 *Add your narrative here.*
